@@ -2,8 +2,13 @@ function addString(numStr) {
     if (numStr == "") {
         return 0;
     }
-    // +(string) is used to convert string to number
-    return +numStr;
+    
+    const numArray = numStr.split(",");
+    let sum = 0;
+    numArray.forEach((val) => {
+        sum += +val;
+    })
+    return sum;
 }
 
 module.exports = addString;
