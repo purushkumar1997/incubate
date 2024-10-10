@@ -13,9 +13,16 @@ function addString(numStr) {
     }
     const numArray = numStr.split(splitStr);
     let sum = 0;
+    const negativeNums = [];
     numArray.forEach((val) => {
+        if (+val < 0) {
+            negativeNums.push(val);
+        }
         sum += +val;
     })
+    if (negativeNums.length > 0) {
+        throw new Error("negative numbers not allowed " + negativeNums.join(" "));
+    }
     return sum;
 }
 

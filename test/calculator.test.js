@@ -25,5 +25,5 @@ test("It will handle custom delimiters", () => {
 })
 
 test("It should throw an error if any negative number", () => {
-    expect(addString("1,-2,3")).toThrowError("negative numbers not allowed -2")
+    expect(() => addString("1,-2,3")).toThrowError("negative numbers not allowed -2")
 })
