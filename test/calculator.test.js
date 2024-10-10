@@ -23,3 +23,7 @@ test("It will give sum of numbers if new line will get introduced in string as i
 test("It will handle custom delimiters", () => {
     expect(addString("//;\n1;2")).toBe(3);
 })
+
+test("It should throw an error if any negative number", () => {
+    expect(addString("1,-2,3")).toBe("negative numbers not allowed -2")
+})
