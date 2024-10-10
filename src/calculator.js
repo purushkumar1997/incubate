@@ -15,10 +15,13 @@ function addString(numStr) {
     let sum = 0;
     const negativeNums = [];
     numArray.forEach((val) => {
-        if (+val < 0) {
+        let num = +val;
+        if (num < 0) {
             negativeNums.push(val);
         }
-        sum += +val;
+        if (num <= 1000) {
+            sum += num;
+        }
     })
     if (negativeNums.length > 0) {
         throw new Error("negative numbers not allowed " + negativeNums.join(" "));
