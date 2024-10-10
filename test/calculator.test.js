@@ -19,3 +19,7 @@ test("It will return sum of more numbers given as comma seperated string", () =>
 test("It will give sum of numbers if new line will get introduced in string as input", () => {
     expect(addString("4\n5,3")).toBe(12);
 })
+
+test("It will handle custom delimiters", () => {
+    expect(addString("//;\n1;2")).toBe(3);
+})
