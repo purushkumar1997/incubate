@@ -3,7 +3,8 @@ function addString(numStr) {
         return 0;
     }
     
-    const numArray = numStr.split(",");
+    const splitStr = new RegExp('[,\n]');
+    const numArray = numStr.split(splitStr);
     let sum = 0;
     numArray.forEach((val) => {
         sum += +val;
